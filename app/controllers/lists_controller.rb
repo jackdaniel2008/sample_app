@@ -14,6 +14,8 @@ class ListsController < ApplicationController
   end
 
   def index
+    # データの一覧画面用として定義する
+    @lists = List.all
   end
 
   def show
