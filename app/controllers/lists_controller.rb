@@ -37,6 +37,6 @@ class ListsController < ApplicationController
   private
   # ストロングパラメータ(悪意のあるデータを防ぐセキュリティ)
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 end

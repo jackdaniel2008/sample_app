@@ -10,4 +10,12 @@
     <%= link_to list.title, list_path(list.id) %>
   </span>
 
+  <p>画像</p>
+  <!--if式「attached?」で画像の有無を確認、trueかfalseで内容が変わる-->
+  <% if list.image.attached? %>
+    <%= image_tag list.image, size: "200×200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200×200" %>
+  <% end %>
+
 <% end %>
