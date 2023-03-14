@@ -2,11 +2,15 @@
 <h1>新規投稿</h1>
 <!-- form_withヘルパー部分 -->
 <%= form_with model: @list, url: '/lists', method: :post do |f| %>
+
   <h4>タイトル</h4>
+  <!--タイトルの記入欄-->
   <%= f.text_field :title %>
 
   <h4>本文</h4>
+  <!--本文の記入欄-->
   <%= f.text_area :body %>
 
+  <!--投稿ボタン-->
   <%= f.submit '投稿' %>
 <% end %>
